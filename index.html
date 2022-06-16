@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="Stylesheet" href="css/global.css">
+    <!-- Meus Scripts para o Nano RPG -->
+    <script src="js/InicializadorDeAtributos.js" defer></script>
+    <script src="js/atributos.js" defer></script>    
+
+    <title>Ficha Nano RPG</title>
+  </head>
+  <body>
+    <div class="container" id="atributos"><!-- INICIO DE ATRIBUTOS -->
+        <h3>Atributos</h3>
+        <div class="row rowAtributos" id="atributosPrimarios"><!-- INICIO ATRIBUTOS PRIMARIOS -->
+            <div class="col-2" id="atributoForca">
+                <h5 id="nomeDoAtributo">Força:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido" >
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoDestreza">
+                <h5 id="nomeDoAtributo">Destreza:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoVitalidade">
+                <h5 id="nomeDoAtributo">Vitalidade:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoInteligencia">
+                <h5 id="nomeDoAtributo">Inteligencia:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoCarisma">
+                <h5 id="nomeDoAtributo">Carisma:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoEsperteza">
+                <h5 id="nomeDoAtributo">Esperteza:<span id="valorTotalDoAtributo"></span></h5>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+        </div><!-- FIM ATRIBUTOS PRIMARIOS -->
+
+        <div class="row rowAtributos" id="atributosSecundarios"><!-- INICIO ATRIBUTOS SECUNDARIOS -->
+            <div class="col-2" id="atributoDano" data-media-base="atributoDestreza|atributoForca">
+                <h5 id="nomeDoAtributo">Dano:<span id="valorTotalDoAtributo"></span></h5>                
+                <span class="atributoBaseMedia">Destreza + Força: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido" >
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoIniciativa" data-media-base="atributoDestreza|atributoEsperteza">
+                <h5 id="nomeDoAtributo">Iniciativa:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Destreza + Esperteza: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoPercepcao" data-media-base="atributoEsperteza|atributoInteligencia">
+                <h5 id="nomeDoAtributo">Percepção:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Esperteza + Inteligencia: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoMana" data-media-base="atributoCarisma|atributoInteligencia">
+                <h5 id="nomeDoAtributo">Mana:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Carisma + Inteligencia: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoAparencia" data-media-base="atributoCarisma|atributoVitalidade">
+                <h5 id="nomeDoAtributo">Aparencia:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Carisma + Vitalidade: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoPontosDeVida" data-media-base="atributoForca|atributoVitalidade">
+                <h5 id="nomeDoAtributo">Pontos de Vida:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Força + Vitalidade: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+        </div><!-- FIM ATRIBUTOS SECUNDARIOS -->
+        
+        <div class="row rowAtributos" id="atributosTerciarios"><!-- INICIO ATRIBUTOS TERCIARIOS -->
+            <div class="col-2" id="atributoVelocidade" data-media-base="atributoDano|atributoForca|atributoPontosDeVida">
+                <h5 id="nomeDoAtributo">Velocidade:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Dano + Força + Pontos de Vida: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido" >
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoAtaque" data-media-base="atributoIniciativa|atributoDestreza|atributoDano">
+                <h5 id="nomeDoAtributo">Ataque:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Iniciativa + Destreza + Dano: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoDefesa" data-media-base="atributoIniciativa|atributoEsperteza|atributoPercepcao">
+                <h5 id="nomeDoAtributo">Defesa:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Iniciativa + Esperteza + Percepção: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoForcaDeVontade" data-media-base="atributoInteligencia|atributoPercepcao|atributoMana">
+                <h5 id="nomeDoAtributo">Força de Vontade:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Inteligencia + Percepção + Mana: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoEmpatia" data-media-base="atributoAparencia|atributoCarisma|atributoMana">
+                <h5 id="nomeDoAtributo">Empatia:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Aparencia + Carisma + Mana: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+            <div class="col-2" id="atributoFadiga" data-media-base="atributoPontosDeVida|atributoVitalidade|atributoAparencia">
+                <h5 id="nomeDoAtributo">Fadiga:<span id="valorTotalDoAtributo"></span></h5>
+                <span class="atributoBaseMedia">Pontos de Vida + Vitalidade + Aparencia: <span id="valorTotalDaMediaBaseAtributo"></span></span>
+                <form>
+                    <input type="number" name="" id="valorInvestido">
+                </form>
+                <h5>Outros:<span id="valorTotalOutrasOrigens"></span></h5>
+                <ul id="grupoDeOutrasOrigens">
+                    <li id="itemDeOutrasOrigens">Exemplo:<span id="valorItemOutrasOrigens"></span></li>
+                </ul>                
+            </div>
+        </div><!-- FIM ATRIBUTOS TERCIARIOS -->
+
+    </div><!-- FIM DE ATRIBUTOS -->
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
