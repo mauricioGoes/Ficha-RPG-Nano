@@ -56,8 +56,7 @@ function calcularMediaBaseDoAtributo(){
     let idsDosAtributosSecTer = identificadorDeAtributosSecTer();    
     let retemObjetosSecTer = lerAtributosSecTer(idsDosAtributosSecTer);       
     let retemValoresTotaisDosAtributosBase = coletaValoresDataMediaDosAtributosSecTer(retemObjetosSecTer);
-    criarMediaDosAtributosBaseSecTer(retemValoresTotaisDosAtributosBase);
-    //console.log(retemValoresTotaisDosAtributosBase);
+    criarMediaDosAtributosBaseSecTer(retemValoresTotaisDosAtributosBase);    
     return     
 }
 
