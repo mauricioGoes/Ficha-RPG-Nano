@@ -11,7 +11,7 @@ function incluirEntradaDeDadosInput (){
 }
 
 function calcularValorTotalDoAtributo(inputSelecionadoDoAtributo){
-    let idDoAtributoDoInput = inputSelecionadoDoAtributo.parentElement.parentElement.id;
+    let idDoAtributoDoInput = inputSelecionadoDoAtributo.parentElement.parentElement.id;    
     let valoresRecolhidosDoAtributo = lerValoresDoAtributo(idDoAtributoDoInput);
     let somaTotalDosValoresDoAtributo = somarValoresTotaisDoAtributo(valoresRecolhidosDoAtributo);
     atualizarValorTotalDoAtributo(somaTotalDosValoresDoAtributo, idDoAtributoDoInput);    
@@ -50,6 +50,7 @@ function somarValoresTotaisDoAtributo(valoresRecolhidosDoAtributo){
 function atualizarValorTotalDoAtributo(somaTotalDosValoresDoAtributo, idDoAtributoDoInput){
     let selecionaAtributo = document.querySelector(`#${idDoAtributoDoInput}`).querySelector("#valorTotalDoAtributo");
     selecionaAtributo.textContent = somaTotalDosValoresDoAtributo;
+    console.log("O atributo do input é: "+idDoAtributoDoInput+". E o valor total dele é: "+somaTotalDosValoresDoAtributo);
 };
 
 function calcularMediaBaseDoAtributo(){
@@ -86,7 +87,7 @@ function lerAtributosSecTer(idsDosAtributosSecTer){
 
 function coletaValoresDataMediaDosAtributosSecTer(retemObjetosSecTer){     
     let coletaValoresTotaisDosAtributosBase = [];
-    let tabuldorDosValoresBase = [];
+    let tabuladorDosValoresBase = [];
         for(let contador = 0; contador < retemObjetosSecTer.length; contador++){
             let elementosBase = retemObjetosSecTer[contador].getAttribute('data-media-base');
             let separaOsIdsDosAtributosBase = elementosBase.split("|");
@@ -95,19 +96,19 @@ function coletaValoresDataMediaDosAtributosSecTer(retemObjetosSecTer){
                 coletaValoresTotaisDosAtributosBase[0] = identificadorDeIdsAtributosSecTer;
                 coletaValoresTotaisDosAtributosBase[1] = document.querySelector(`#${separaOsIdsDosAtributosBase[0]}`).querySelector("#valorTotalDoAtributo").textContent;
                 coletaValoresTotaisDosAtributosBase[2] = document.querySelector(`#${separaOsIdsDosAtributosBase[1]}`).querySelector("#valorTotalDoAtributo").textContent;
-                tabuldorDosValoresBase.push([coletaValoresTotaisDosAtributosBase[0],coletaValoresTotaisDosAtributosBase[1],coletaValoresTotaisDosAtributosBase[2]]);            
+                tabuladorDosValoresBase.push([coletaValoresTotaisDosAtributosBase[0],coletaValoresTotaisDosAtributosBase[1],coletaValoresTotaisDosAtributosBase[2]]);            
             } else if(separaOsIdsDosAtributosBase.length === 3){
                 coletaValoresTotaisDosAtributosBase[0] = identificadorDeIdsAtributosSecTer;
                 coletaValoresTotaisDosAtributosBase[1] = document.querySelector(`#${separaOsIdsDosAtributosBase[0]}`).querySelector("#valorTotalDoAtributo").textContent;
                 coletaValoresTotaisDosAtributosBase[2] = document.querySelector(`#${separaOsIdsDosAtributosBase[1]}`).querySelector("#valorTotalDoAtributo").textContent;
                 coletaValoresTotaisDosAtributosBase[3] = document.querySelector(`#${separaOsIdsDosAtributosBase[2]}`).querySelector("#valorTotalDoAtributo").textContent;
-                tabuldorDosValoresBase.push([coletaValoresTotaisDosAtributosBase[0],coletaValoresTotaisDosAtributosBase[1],coletaValoresTotaisDosAtributosBase[2],coletaValoresTotaisDosAtributosBase[3]]);            
+                tabuladorDosValoresBase.push([coletaValoresTotaisDosAtributosBase[0],coletaValoresTotaisDosAtributosBase[1],coletaValoresTotaisDosAtributosBase[2],coletaValoresTotaisDosAtributosBase[3]]);            
             }else {
                 alert("Erro ao identificar os atributos Base");
                 return;
             }
         }    
-    return tabuldorDosValoresBase;    
+    return tabuladorDosValoresBase;    
 };
 
 function criarMediaDosAtributosBaseSecTer(retemValoresTotaisDosAtributosBase){    
@@ -122,6 +123,7 @@ function criarMediaDosAtributosBaseSecTer(retemValoresTotaisDosAtributosBase){
             valoresIndividuaisMedia[0] = parseInt(retemValoresTotaisDosAtributosBase[contador][1]);
             valoresIndividuaisMedia[1] = parseInt(retemValoresTotaisDosAtributosBase[contador][2]);
             valoresIndividuaisMedia[2] = parseInt(retemValoresTotaisDosAtributosBase[contador][3]);
+            console.log("Id do atributo terc: "+retemValoresTotaisDosAtributosBase[contador][0]+". Valor1= "+valoresIndividuaisMedia[0]+". Valor2= "+valoresIndividuaisMedia[1]+". Valor3= "+valoresIndividuaisMedia[2]);
             mediaDosValoresIndividuais = Math.ceil((valoresIndividuaisMedia[0]+valoresIndividuaisMedia[1]+valoresIndividuaisMedia[2])/3);
         }else{
             alert("Não foi possivel identificar corretamente os valores base para calculo.");
@@ -138,4 +140,5 @@ function criarMediaDosAtributosBaseSecTer(retemValoresTotaisDosAtributosBase){
 function atualizarValoresDaMediaBase(valorDaMedia, idDoAtributo){
     let selecionaMediaBaseAtributo = document.querySelector(`#${idDoAtributo}`).querySelector("#valorTotalDaMediaBaseAtributo");
     selecionaMediaBaseAtributo.textContent = valorDaMedia;
+    //console.log("O atributo Sec/Ter é: "+idDoAtributo+". E o valor da média é: "+valorDaMedia);
 };
