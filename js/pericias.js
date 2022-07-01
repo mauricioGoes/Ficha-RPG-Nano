@@ -43,6 +43,7 @@ function adicionadorDePericias(){
         selecionaListaDePericias.append(periciaChecada);
     }    
     leitorDeInputDaPericia(idDaPericia);
+    adicionarApagarPericia(idDaPericia);
 }
 
 function checadorDeRepeticaoDePericias(idDaPericia){
@@ -86,4 +87,18 @@ function leitorDeInputDaPericia(idDaPericia){
     identificadorDoInputPericia.addEventListener("input", function(){
         console.log("Input da Pericia "+ idDaPericia +" foi ativado");
     });
+};
+
+function adicionarApagarPericia(idDaPericia){
+    let identificadorPericia = idDaPericia;    
+    let identificadorDoBotaoDaPericia = document.querySelector("#listaDePericiasPlayer").querySelector(`#${identificadorPericia}`).querySelector("#apagaPericia");
+    identificadorDoBotaoDaPericia.addEventListener("click", function(){
+        apagarPericia(idDaPericia);
+        //console.log("O botão apagar da Pericia "+ idDaPericia +" foi ativado");
+    });
+};
+
+function apagarPericia(idDaPericia){
+    let identificadorDePericia = document.querySelector("#listaDePericiasPlayer").querySelector(`#${idDaPericia}`);
+    identificadorDePericia.remove();    
 };
