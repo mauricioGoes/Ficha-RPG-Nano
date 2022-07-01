@@ -11,7 +11,9 @@
     <!-- Meus Scripts para o Nano RPG -->
     <script src="js/InicializadorDeAtributos.js" defer></script>
     <script src="js/atributos.js" defer></script>
+    <script src="js/grupoDePericias.js" defer></script>
     <script src="js/pericias.js" defer></script>
+    
 
     <title>Ficha Nano RPG</title>
   </head>
@@ -221,12 +223,16 @@
 
     </div><!-- FIM DE ATRIBUTOS -->
     <div class="container" id="pericias"><!-- inicio de pericias -->
-        <h3>Pericias:</h3>
-        <button type="button" class="btn" id="btnAdicionarPericias">+ Pericia</button>
+        <h3>Pericias:</h3>        
+        <div class="row" id="containerListaDeSelecaoDePericias">
+            <div class="col-1"><button type="button" class="btn" id="btnAdicionarPericias">+ Pericia</button></div>
+            <div class="col-2" id="listaDePericias"></div>
+            
+        </div>
         <div class="row">
             <span class="col-3">Nome da pericia </span><span class="col-3"> Atributo Base</span><span class="col-2"> Pontos </span><span class="col-2"> Total </span>
         </div>
-        <ul id="listaDePericias" class="classeListaDePericias">
+        <ul id="listaDePericiasPlayer" class="classeListaDePericias">
             
         </ul>
     </div>
